@@ -1,0 +1,87 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-06-2021
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   06-06-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+  <div
+    style="
+      margin-top: 2rem;
+      border: 1px solid lightgray;
+      border-radius: 4px;
+      padding: 1rem;
+    "
+  >
+    <lightning-layout>
+      <lightning-layout-item size="4">
+        <img
+          src={image}
+          style="
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            overflow: hidden;
+          "
+        />
+      </lightning-layout-item>
+      <lightning-layout-item size="8" padding="horizontal-medium">
+        <lightning-layout multiple-rows vertical-align="center">
+          <lightning-layout-item size="12">
+            <p class="slds-text-heading_medium">{title}</p>
+          </lightning-layout-item>
+          <template if:true={hasDetails}>
+            <lightning-layout-item size="12" class="slds-m-top_medium">
+              <lightning-formatted-rich-text
+                value={summary}
+              ></lightning-formatted-rich-text>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-m-top_medium">
+              <span class="slds-p-right_medium" style="font-weight: bold"
+                >Price Per Serving: </span
+              ><lightning-formatted-number
+                format-style="currency"
+                currency-code="USD"
+                value={price}
+              ></lightning-formatted-number>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+              <span class="slds-p-right_medium" style="font-weight: bold"
+                >Ready In: </span
+              ><lightning-formatted-number
+                value={time}
+              ></lightning-formatted-number>
+              &nbsp;Minutes
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+              <span class="slds-p-right_medium" style="font-weight: bold"
+                >Dish Types: </span
+              ><lightning-formatted-text
+                value={dishTypes}
+              ></lightning-formatted-text>
+            </lightning-layout-item>
+            <lightning-layout-item size="12">
+              <span class="slds-p-right_medium" style="font-weight: bold"
+                >Diets: </span
+              ><lightning-formatted-text
+                value={diets}
+              ></lightning-formatted-text>
+            </lightning-layout-item>
+          </template>
+          <template if:false={hasDetails}>
+            <lightning-button
+              label="Get Full Receipe"
+              variant="brand"
+              onclick={fetchRecipe}
+              class="slds-m-top_large"
+            ></lightning-button>
+          </template>
+        </lightning-layout>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
+</template>
