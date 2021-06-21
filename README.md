@@ -12,4 +12,5 @@ This application is part of my Salesforce Integration Crash Course. Checkout my 
 3. Authorize a Salesforce Org `sfdx force:auth:web:login -a TestOrg1`
 4. Deploy all metadata to the Salesforce Org `sfdx force:source:deploy -p force-app/main/default/`
 5. Assign permission set to current user `sfdx force:user:permset:assign -n Receipe_App`
-6. Open Saleforce Org `sfdx force:org:open` and open 'Receipe Search' tab from application launcher
+6. Open 'Spoonacular' Apex Class and replace the 'API_KEY' value with your own spoonacular api
+7. Open Saleforce Org `sfdx force:org:open` and open 'Receipe Search' tab from application launcher
