@@ -18,4 +18,4 @@ This application is part of my Salesforce Integration Crash Course. Checkout my 
 8. Come back to Salesforce Org, and in Application Launcher search for 'Receipe Search'
 
 
-Have Fun!! Subscribe to my youtube channel for more!!
+Have Fun!! Subscribe to my [youtube channel](https://youtube.com/sfdcfacts) for more!!
