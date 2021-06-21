@@ -2,13 +2,13 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 06-06-2021
+ * @last modified on  : 06-21-2021
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
  * Modifications Log 
  * Ver   Date         Author                               Modification
  * 1.0   06-05-2021   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
 **/
-public with sharing class RecipeController {
+public with sharing class Spoonacular {
     private static final String RECEIPE_API = 'https://api.spoonacular.com';
     private static final String API_KEY = '1a92b0a3af7643c6be8357431dd80c93';
 
